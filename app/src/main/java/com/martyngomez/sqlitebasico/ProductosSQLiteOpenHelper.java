@@ -13,11 +13,16 @@ public class ProductosSQLiteOpenHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "productos.db";
     private static final int DATA_BASE_VERSION = 1;
 
+    public static final String TABLE_PRODUCTS = "productos";
+    public static final String COLUMN_ID = "id";
+    public static final String COLUMN_NAME = "nombre";
+    public static final String COLUMN_PRICE = "precio";
+
     public static final String CREATE_TABLE =
-            "CREATE TABLE PRODUCTOS ( " +
-                    "ID INTEGER PRIMARY KEY AUTOINCREMENT," +
-                    "NOMBRE TEXT," +
-                    "PRECIO INTEGER )";
+            "CREATE TABLE " + TABLE_PRODUCTS + " (" +
+                    COLUMN_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    COLUMN_NAME + " TEXT," +
+                    COLUMN_PRICE + " INTEGER " + ")";
 
     public static final String DROP_TABLE = "DROP TABLE IF EXIST PRODUCTOS";
 
