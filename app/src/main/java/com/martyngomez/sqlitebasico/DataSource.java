@@ -1,5 +1,6 @@
 package com.martyngomez.sqlitebasico;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
@@ -29,4 +30,15 @@ public class DataSource {
     public void close (){
         dbhelper.close();
     }
+
+
+    public void create (Producto producto){
+        ContentValues contentValues = new ContentValues();
+        contentValues.put ( "id", producto.getNombre() );
+        contentValues.put ( "precio", producto.getPrecio() );
+        database.insert("productos",null,contentValues);
+
+    }
+
+
 }

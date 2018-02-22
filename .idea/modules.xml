@@ -3,9 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SQLiteBasico.iml" filepath="$PROJECT_DIR$/SQLiteBasico.iml" />
-      <module fileurl="file://D:\MTN\codigo fuente\Android\SQLiteBasico\SQLiteBasico.iml" filepath="D:\MTN\codigo fuente\Android\SQLiteBasico\SQLiteBasico.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://D:\MTN\codigo fuente\Android\SQLiteBasico\app\app.iml" filepath="D:\MTN\codigo fuente\Android\SQLiteBasico\app\app.iml" />
     </modules>
   </component>
 </project>
