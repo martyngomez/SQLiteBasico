@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
         texto = (EditText) findViewById(R.id.texto);
         lista = (ListView) findViewById(R.id.lista);
 
+
+
         dataSource = new DataSource(this);
         dataSource.open();
         crearProductos();
@@ -38,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
         all.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                listaProductos = dataSource.findAll();
+                refreshsDislay();
             }
         });
 
@@ -48,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
     }
 
     public void crearProductos()
@@ -65,5 +68,12 @@ public class MainActivity extends AppCompatActivity {
         Log.i("Crear Productos", "Productos insertados");
     }
 
-    
+    public void refreshsDislay (){
+        ArrayAdapter<Producto> adapter = new ArrayAdapter<Producto>(this, android.R.layout.simple_expandable_list_item_1, listaProductos);
+        lista.setAdapter(adapter);
+    }
+
+
+
+
 }

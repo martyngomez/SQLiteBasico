@@ -9,7 +9,8 @@ import android.util.Log;
  * Created by MTN on 22/02/2018.
  */
 
-public class ProductosSQLiteOpenHelper extends SQLiteOpenHelper {
+public class ProductosOpenHelper extends SQLiteOpenHelper {
+
     private static final String DATABASE_NAME = "productos.db";
     private static final int DATA_BASE_VERSION = 1;
 
@@ -26,7 +27,7 @@ public class ProductosSQLiteOpenHelper extends SQLiteOpenHelper {
 
     public static final String DROP_TABLE = "DROP TABLE IF EXIST PRODUCTOS";
 
-    public ProductosSQLiteOpenHelper(Context context) {
+    public ProductosOpenHelper(Context context) {
         super(context, DATABASE_NAME, null, DATA_BASE_VERSION);
     }
 

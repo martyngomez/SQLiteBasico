@@ -11,6 +11,9 @@ public class Producto {
     String nombre;
     int precio;
 
+    public Producto() {
+    }
+
     public Producto(int id, String nombre, int precio) {
         this.id = id;
         this.nombre = nombre;
@@ -44,6 +47,6 @@ public class Producto {
     @Override
     public String toString() {
         NumberFormat nf = NumberFormat.getCurrencyInstance();
-        return nombre + "/n" +  nf.format(precio);
+        return nombre + "\n" +  nf.format(precio);
     }
 }
